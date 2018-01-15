@@ -164,9 +164,9 @@ export default function createTextMaskInputElement(config) {
       // In some cases, this `update` method will be repeatedly called with a raw value that has already been conformed
       // and set to `inputElement.value`. The below check guards against needlessly readjusting the input state.
       // See https://github.com/text-mask/text-mask/issues/231
-      if (inputElement.value === inputElementValue) {
-        return
-      }
+      // if (inputElement.value === inputElementValue) {
+      //   return
+      // }
 
       inputElement.value = inputElementValue // set the input value
       safeSetSelection(inputElement, adjustedCaretPosition) // adjust caret position
