@@ -39,10 +39,11 @@ export default class MaskedInput extends React.Component {
     delete props.value
     delete props.onChange
     delete props.showMask
-
+    // Added onClick event for personal use
     return (
       <input
         {...props}
+        onClick={this.onChange}
         onChange={this.onChange}
         defaultValue={this.props.value}
         ref={(inputElement) => (this.inputElement = inputElement)}
